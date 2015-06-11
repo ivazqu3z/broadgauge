@@ -19,23 +19,25 @@ How to setup
 
 * Clone the repo
 
-        git clone git://github.com/anandology/broadgauge.git
+        ## CHANGE TO PYTHON IRELAND git clone git://github.com/anandology/broadgauge.git
         cd broadgauge
 
-* setup virtualenv and install python packages
+* Setup virtualenv and install python packages
 
         virtualenv .
         . bin/activate
         pip install -r requirements.txt
 
-* create a database
+* Start Postgres server
+
+* Create a database
 
         createdb pythonexpress
 
-* add schema 
+* Add schema
         
         psql pythonexpress < broadgauge/schema.sql
 
-* run the app
+* Run the app
 
         python run.py
