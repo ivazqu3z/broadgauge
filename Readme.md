@@ -34,6 +34,7 @@ Linux
 
 
 Mac
+
         To launch start postgresql at login:
         ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 
