@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Broadgauge by PythonIreland</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Broadgauge</h1>
+      <h2 class="project-tagline">Platform for managing training/workshops</h2>
+      <a href="https://github.com/PythonIreland/broadgauge" class="btn">View on GitHub</a>
+      <a href="https://github.com/PythonIreland/broadgauge/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/PythonIreland/broadgauge/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="windows-install-instructions" class="anchor" href="#windows-install-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Windows install instructions</h1>
+
+<h2>
+<a id="-python-" class="anchor" href="#-python-" aria-hidden="true"><span class="octicon octicon-link"></span></a>== Python ==</h2>
+
+<p><a href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></p>
+
+<p>Download 2.7.10  - check if 64 bit version suits you by opening the "System" application
+Run the installer.
+In the "Customize Python" , ensure you select the option to install Python into the PATH</p>
+
+<h2>
+<a id="-postgresql-" class="anchor" href="#-postgresql-" aria-hidden="true"><span class="octicon octicon-link"></span></a>== PostGresQL ==</h2>
+
+<p><a href="http://www.postgresql.org/download/windows/">http://www.postgresql.org/download/windows/</a>
+click the link starting at:
+"Download the installer from EnterpriseDB for all supported versions."
+which brings you to the "EnterpriseDB" website. Select Windows (64 bit if it suits)</p>
+
+<p>Run the installer
+If you see a Visual C++ dialog pop up, just ignore it.</p>
+
+<p>Hit Next until you hit a "Password" prompt. You need to enter a password, take a note of it.
+Hit Next until everything installed, the defaults are fine.</p>
+
+<p>On the final page, <em>DO NOT</em> allow StackBuilder to run. You don’t need the extra tools it will suggest.</p>
+
+<h2>
+<a id="-visual-c-compiler-for-python-27-" class="anchor" href="#-visual-c-compiler-for-python-27-" aria-hidden="true"><span class="octicon octicon-link"></span></a>== Visual C++ Compiler for Python 2.7 ==</h2>
+
+<p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=44266">http://www.microsoft.com/en-us/download/details.aspx?id=44266</a>
+Install.</p>
+
+<h2>
+<a id="-virtualenv-" class="anchor" href="#-virtualenv-" aria-hidden="true"><span class="octicon octicon-link"></span></a>== VirtualEnv ==</h2>
+
+<p>Open a Command Prompt, (Hit Windows key, type "command.exe" and hit enter)
+Type:
+    pip install virtualenv</p>
+
+<h2>
+<a id="-git-" class="anchor" href="#-git-" aria-hidden="true"><span class="octicon octicon-link"></span></a>== Git ==</h2>
+
+<p><a href="http://git-scm.com/downloads/win">http://git-scm.com/downloads/win</a>
+Download &amp; run the installer
+Hit Next until page "Adjusting your PATH environment" and select the option: "Use GIT from the Windows Command Prompt"
+Hit Next again until all done.</p>
+
+<h2>
+<a id="-pycharm-" class="anchor" href="#-pycharm-" aria-hidden="true"><span class="octicon octicon-link"></span></a>== PyCharm ==</h2>
+
+<p><a href="https://www.jetbrains.com/pycharm/download/">https://www.jetbrains.com/pycharm/download/</a>
+Select the "Download Community" option</p>
+
+<p>Run the installer
+Is good idea to associate the ".py" files with PyCharm (so double-clicking any python file opens it in PyCharm)
+Just hit next and install.</p>
+
+<h2>
+<a id="-set-up-postgresql-" class="anchor" href="#-set-up-postgresql-" aria-hidden="true"><span class="octicon octicon-link"></span></a>== Set up PostGreSQL ==</h2>
+
+<p>First we need to fix an issue with PostGres and Windows.  </p>
+
+<ol>
+<li>Open Start menu, type "Command"<br>
+</li>
+<li>Find a "Command Prompt" option, right-click it and select "Run as Administrator"<br>
+</li>
+<li>Run<br>
+<code>notepad "C:\Program Files\PostgreSQL\9.4\pg_env.bat"</code><br>
+</li>
+<li>Edit and replace<br>
+<code>@SET PATH="C:/Program Files/PostgreSQL/9.4\bin";%PATH%</code><br>
+with<br>
+<code>@SET PATH=C:/Program Files/PostgreSQL/9.4\bin;%PATH%</code><br>
+(i.e. just remove the double quotes)
+so it should look like:</li>
+</ol>
+
+<p><code>@ECHO OFF</code>
+<code>REM The script sets environment variables helpful for PostgreSQL</code></p>
+
+<p><code>@SET PATH=C:\Program Files\PostgreSQL\9.4\bin;%PATH%</code>
+<code>@SET PGDATA=C:\Program Files\PostgreSQL\9.4\data</code>
+<code>@SET PGDATABASE=postgres</code>
+<code>@SET PGUSER=postgres</code>
+<code>@SET PGPORT=5432</code>
+<code>@SET PGLOCALEDIR=C:\Program Files\PostgreSQL\9.4\share\locale</code></p>
+
+<ol>
+<li>Hit save</li>
+</ol>
+
+<h2>
+<a id="setting-up-virtual-env-and-requirements" class="anchor" href="#setting-up-virtual-env-and-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>==Setting Up Virtual Env and Requirements==</h2>
+
+<p>In PyCharm, open the "requirements.txt" file. Comment out the <code>"psycopg2"</code> line, by putting a # in front of it.
+This module is broken in Windows. Instead need to install it manually: </p>
+
+<p><a href="http://www.stickpeople.com/projects/python/win-psycopg/">http://www.stickpeople.com/projects/python/win-psycopg/</a>
+Download the "Python 4.7" version that suits your laptop (32bit or 64bit)</p>
+
+<p>Open a Terminal in PyCharm(hover mouse over bottom left icon, select Terminal)
+Run these commands:</p>
+
+<p><code>virtualenv .</code>
+<code>Scripts\activate</code></p>
+
+<p>You are now inside a Virtual Environment, whose only purpose is to serve this website.<br>
+To set up the environment in Pip, run the following command: 
+<code>"C:\Program Files\PostgreSQL\9.4\pg_env.bat"</code></p>
+
+<p>Now install the win-psycopg2 download with:
+<code>easy_install C:\Users\FAKE\FOLDERPATH\psycopg2-2.6.0.win-amd64-py2.7-pg9.4.1-release.exe</code></p>
+
+<p>Next:
+    <code>pip install -r requirements.txt</code></p>
+
+<p>Create a database:
+    <code>createdb pythonexpress</code></p>
+
+<p>Add schema:
+    <code>psql pythonexpress &lt; broadgauge/schema.sql</code></p>
+
+<p>Run the app:
+    <code>python run.py</code></p>
+
+<p>In your web browser open:<br>
+http://localhost:8080</p>
+
+<h2>
+<a id="note" class="anchor" href="#note" aria-hidden="true"><span class="octicon octicon-link"></span></a>==NOTE==</h2>
+
+<p>You don't have to create a new env everytime. 
+Just run the following command: 
+        <code>Scripts\activate</code></p>
+
+<p>Run the app:
+    <code>python run.py</code> </p>
+
+<h2>
+<a id="fin" class="anchor" href="#fin" aria-hidden="true"><span class="octicon octicon-link"></span></a>==FIN==</h2>
+
+<p>Congratulations! By now you wonder why you don't run Linux or have a Mac. You have probably also watched all the others with these devices happily get set up. If you would like help fixing this, just talk to us. ;-)</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/PythonIreland/broadgauge">Broadgauge</a> is maintained by <a href="https://github.com/PythonIreland">PythonIreland</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
