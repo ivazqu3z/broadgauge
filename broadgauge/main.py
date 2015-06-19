@@ -74,6 +74,8 @@ def main():
         sys.argv = sys.argv[:index] + sys.argv[index+2:]
         load_config_from_file(configfile)
 
+    if os.name == 'nt':
+        print "Hi Windows user, you should go to http://localhost:8080 to see the site"
     setup_logging()
     webapp.app.run()
 
