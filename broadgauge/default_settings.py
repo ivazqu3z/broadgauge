@@ -11,6 +11,9 @@ google_client_secret = 'CI8Pl4jSmsK5gbFRa9dfio1E'
 
 db_parameters = dict(dbn='postgres', db='pythonexpress')
 
+contact_email = "python@python.ie"
+admin_user = "gerry@python.ie"
+
 # MAIL SETTINGS
 
 # smtp_server = "smtp.googlemail.com"
