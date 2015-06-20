@@ -3,9 +3,9 @@
 <p>Hi,</p>
 
 {% set org = workshop.get_org() %}
-<p>The <a href="http://www.pythonexpress.in/workshops/{{workshop.id}}">{{workshop.title}}</a> at <a href="http://www.pythonexpress.in/orgs/{{org.id}}">{{org.name}}</a>, {{org.city}} is confirmed.</p>
+<p>The <a href="workshops/{{workshop.id}}">{{workshop.title}}</a> at <a href="http://www.pythonexpress.in/orgs/{{org.id}}">{{org.name}}</a>, {{org.city}} is confirmed.</p>
 
-<p>The trainer is <a href="http://www.pythonexpress.in/trainers/{{trainer.username}}">{{trainer.name}}</a>.</p>
+<p>The trainer is <a href="trainers/{{trainer.username}}">{{trainer.name}}</a>.</p>
 
 <p>Wish you all the best for the workshop!</p>
 
