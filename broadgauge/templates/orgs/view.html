@@ -9,7 +9,7 @@
       {% for m, role in members %}
         <li>
           <div style="width: 50px; float: left;">
-            <img src="http://www.gravatar.com/avatar/{{m.email | md5}}?s=50&d=mm" class="img-thumbnail">
+            <img src="{{ m.avatar_url }}" class="img-thumbnail">
           </div>
           <div style="padding-left: 10px; float: left;">
             <div><strong>{{m.name}}</strong></div>
