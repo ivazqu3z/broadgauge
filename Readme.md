@@ -7,6 +7,8 @@ This is going to be used for managing Python workshops going to be conducted acr
 
 [![Build Status](https://travis-ci.org/anandology/broadgauge.svg?branch=master)](https://travis-ci.org/anandology/broadgauge)
 
+Hi Gerry!!!!!!
+
 Requirements
 ------------
 
