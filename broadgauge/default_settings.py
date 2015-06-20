@@ -17,7 +17,7 @@ else:
     google_client_id = '360651067559-f04a4e5scoa0bgau2tar06q05jeg5j2n.apps.googleusercontent.com'
     google_client_secret = 'CI8Pl4jSmsK5gbFRa9dfio1E'
 
-db_parameters = dict(dbn='postgres', db='pythonexpress', user='gerry', pw='myname1')
+db_parameters = dict(dbn='postgres', db='pythonexpress')
 
 # MAIL SETTINGS
 
