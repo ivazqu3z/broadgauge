@@ -72,6 +72,7 @@ class GitHub(OAuth2Service):
                 name=d["name"],
                 email=email,
                 username=d["login"],
+                avatar_url=d["avatar_url"],
                 github=d["login"],
                 service="GitHub")
         except KeyError, e:
