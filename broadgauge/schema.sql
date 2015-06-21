@@ -8,6 +8,7 @@ create table users (
     bio text,
     website text,
     github text,
+    avatar_url text,
     is_admin boolean,
     is_trainer boolean,
     created timestamp default (current_timestamp at time zone 'UTC')
