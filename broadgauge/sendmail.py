@@ -11,7 +11,7 @@ def sendmail_with_template(template, to, subject,
         cc=None, bcc=None, headers=None, **kwargs):
     """
     Sends an email with the selected html template.
-    html templates can be found inside the broadguage/templates
+    html templates can be found inside the broadgauge/templates
     directory. 
 
     Params:

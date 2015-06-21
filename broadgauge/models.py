@@ -143,7 +143,7 @@ class Organization(Model):
         get_db().insert("organization_members", org_id=self.id, user_id=user.id, role=role)
 
     def get_workshops(self, status=None):
-        """Returns list of workshops by this organiazation.
+        """Returns list of workshops by this organization.
         """
         wheres = {}
         if status:
@@ -242,13 +242,13 @@ class Workshop(Model):
 
     def record_interest(self, trainer):
         """Record that the given trainer has shown interest to conduct
-        the this workshop.
+        this workshop.
         """
         get_db().insert("workshop_trainers", workshop_id=self.id, trainer_id=trainer.id)
 
     def cancel_interest(self, trainer):
-        """Record that the given trainer has shown interest to conduct
-        the this workshop.
+        """Record that the given trainer has withdrawn interest in conducting
+        this workshop.
         """
         get_db().delete("workshop_trainers",
             where="workshop_id=$self.id AND trainer_id=$trainer.id",
