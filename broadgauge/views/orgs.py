@@ -55,8 +55,11 @@ class org_new_member:
                                        org=org, form=form)
             else:
                 member = User.find(email=i.email)
-                org.add_member(member, i.role)
-                flash("Successfully added {} as member.".format(member.name))
+                if org.is_member(member):
+                    flash("{} is already a member.".format(member.name), category="warning")
+                else:
+                    org.add_member(member, i.role)
+                    flash("Successfully added {} as member.".format(member.name))
                 raise web.seeother("/orgs/{}".format(org.id))
 
     def can_update(self, org):

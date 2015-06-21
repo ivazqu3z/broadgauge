@@ -69,7 +69,7 @@ class GitHub(OAuth2Service):
                 logger.error("No verified email found for this user {}".format(d['login']))
                 return
             return dict(
-                name=d["name"],
+                name=(d["name"] if "name" in d else ''),
                 email=email,
                 username=d["login"],
                 avatar_url=d["avatar_url"],
