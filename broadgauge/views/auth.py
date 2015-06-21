@@ -127,6 +127,7 @@ class trainer_signup:
             phone=i.phone,
             city=i.city,
             github=userdata.get('github'),
+            avatar_url=userdata.get('avatar_url'),
             is_trainer=True)
         account.set_login_cookie(user.email)
         flash("Thank you for signing up as a trainer!")

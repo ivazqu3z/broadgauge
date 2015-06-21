@@ -128,6 +128,7 @@ class Google(OAuth2Service):
             return dict(
                 name=d['name'],
                 email=d['email'],
+                avatar_url=d['picture'],
                 username=username,
                 service='Google')
         except KeyError, e:
