@@ -66,7 +66,7 @@ class workshop_view:
         if user and user.is_trainer():
             workshop.record_interest(user)
             signals.workshop_express_interest.send(workshop, trainer=user)
-            flash("Thank you for experessing interest to conduct this workshop.")
+            flash("Thank you for expressing interest to conduct this workshop.")
             raise web.seeother("/workshops/{}".format(workshop.id))
         else:
             return render_template("workshops/view.html", workshop=workshop)

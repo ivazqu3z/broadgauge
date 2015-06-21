@@ -56,9 +56,9 @@ class GitHub(OAuth2Service):
         return OAuth2Service.get_auth_session(self, **kwargs)
 
     def get_userdata(self, code):
-        """Returns the relevant userdata from github.
+        """Returns the relevant userdata from GitHub.
 
-        This function must be called from githun oauth callback
+        This function must be called from GitHub oauth callback
         and the auth code must be passed as argument.
         """
         try:
@@ -114,9 +114,9 @@ class Google(OAuth2Service):
         return OAuth2Service.get_auth_session(self, **kwargs)
 
     def get_userdata(self, code):
-        """Returns the relevant userdata from github.
+        """Returns the relevant userdata from Google.
 
-        This function must be called from githun oauth callback
+        This function must be called from Google oauth callback
         and the auth code must be passed as argument.
         """
         try:
@@ -160,9 +160,9 @@ class Facebook(OAuth2Service):
         return OAuth2Service.get_auth_session(self, **kwargs)
 
     def get_userdata(self, code):
-        """Returns the relevant userdata from github.
+        """Returns the relevant userdata from Facebook.
 
-        This function must be called from githun oauth callback
+        This function must be called from Facebook oauth callback
         and the auth code must be passed as argument.
         """
         try:

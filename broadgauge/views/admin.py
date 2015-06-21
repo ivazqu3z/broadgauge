@@ -81,7 +81,7 @@ class admin_orgs:
         if not form.validate():
             return render_template("admin/orgs.html", form=form)
         org = Organization.new(name=i.name, city=i.city)
-        flash("Successfully created new organizaton.")
+        flash("Successfully created new organization.")
         raise web.seeother("/orgs/{}".format(org.id))
 
 class admin_people:
