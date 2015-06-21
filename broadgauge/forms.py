@@ -57,7 +57,7 @@ class TrainerEditProfileForm(BaseForm):
 class NewWorkshopForm(BaseForm):
     title = StringField('Title', [validators.Required()])
     description = TextAreaField('Description', [validators.Required()])
-    expected_participants = IntegerField('Expected number of pariticipants', [validators.Required()])
+    expected_participants = IntegerField('Expected number of participants', [validators.Required()])
     date = DateField('Preferred Date', [validators.Required()])
 
 class AdminAddOrgForm(BaseForm):
