@@ -38,6 +38,7 @@ class TrainerSignupForm(BaseForm):
         validators.Regexp('^[a-zA-Z0-9._-]+$', message="Only letters, numbers, dot,")])
     phone = StringField('Phone', [validators.Required()])
     city = StringField('City', [validators.Required()])
+    bio = TextAreaField('Biography', [])
     # No need to have email as it is already available from session
 
     def valid_username(self, field):
@@ -55,7 +56,7 @@ class TrainerEditProfileForm(BaseForm):
     phone = StringField('Phone', [validators.Required()])
     city = StringField('City', [validators.Required()])
     website = StringField('Website', [])
-    bio = TextAreaField('Bio', [])
+    bio = TextAreaField('Biography', [])
 
 class NewWorkshopForm(BaseForm):
     title = StringField('Title', [validators.Required()])

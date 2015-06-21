@@ -126,6 +126,7 @@ class trainer_signup:
             username=i.username,
             phone=i.phone,
             city=i.city,
+            bio=i.bio,
             github=userdata.get('github'),
             avatar_url=userdata.get('avatar_url'),
             is_trainer=True)
